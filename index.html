@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermanos A.E | Pladur en Madrid</title>
+
+<style>
+body {
+  background: #111; /* IMPORTANTE: fondo oscuro para que se note */
+}
+
+.dorado {
+  font-size: 40px;
+  font-weight: bold;
+
+  background: linear-gradient(90deg, #FFD700, #FFF3B0, #C9A227, #B89600);
+  
+  /* CLAVE 🔑 */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* fallback */
+  color: transparent;
+}
+</style>
+
+<style>
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #09090b;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* FONDO DECORATIVO */
+body::before {
+  content: "";
+  position: fixed;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%);
+  top: -200px;
+  left: -200px;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(249,115,22,0.15), transparent 70%);
+  bottom: -200px;
+  right: -200px;
+  z-index: -1;
+}
+
+/* LÍNEAS DECORATIVAS */
+
+.lines {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+  z-index: -1;
+  animation: moveGrid 15s linear infinite;
+}
+
+/* ANIMACIÓN GRADIENTES */
+
+@keyframes floatBlue {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(120px, 80px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+@keyframes floatOrange {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-100px, -80px) scale(1.1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* APLICAR ANIMACIÓN */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(59,130,246,0.35), transparent 70%);
+  top: -300px;
+  left: -300px;
+  z-index: -1;
+  animation: floatBlue 10s ease-in-out infinite;
+  filter: blur(60px);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(249,115,22,0.35), transparent 70%);
+  bottom: -250px;
+  right: -250px;
+  z-index: -1;
+  animation: floatOrange 12s ease-in-out infinite;
+  filter: blur(60px);
+}
+
+/* ANIMACIÓN LÍNEAS */
+@keyframes moveGrid {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+.lines {
+  animation: moveGrid 20s linear infinite;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #09090b;
+  color: white;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(9,9,11,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #27272a;
+  
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  overflow: hidden;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 30px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.btn-yellow {
+  background: #facc15;
+  color: black;
+}
+
+.btn-outline {
+  border: 1px solid white;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card {
+  background: #18181b;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #27272a;
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  background: rgba(0,0,0,0.7);
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.float-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.float-buttons a {
+  display: block;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.whatsapp { background: #22c55e; color: black; }
+.call { background: #facc15; color: black; }
+
+footer {
+  text-align: center;
+  border-top: 1px solid #27272a;
+  padding: 30px;
+  color: #a1a1aa;
+}
+</style>
+
+
+
+<style>
+.animated-gradient-goldsilver {
+  background: linear-gradient(
+    90deg,
+    #3A3A3A,
+    #FFFFFF,
+    #7A7A7A,
+    #F2F2F2,
+    #2E2E2E
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 10s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 0% }
+  100% { background-position: 250% }
+}
+</style>
+
+</head>
+
+<body>
+
+  <div class="lines"></div>
+
+<header>
+  <div style="display:flex;align-items:center;gap: 20px;">
+  <img src="logo.png.png" alt="logo" style="height:120px;margin-top:20px;margin-right: 0;display: block;">
+  <h2 style="text-align: center;"><strong>HERMANOS <span style="color:#facc15;">A.E</span></strong><h2>
+</div>
+  <style>
+    .menu a {color: white;text-decoration: none}
+    .menu a:hover {color: yellow;}
+  </style>
+  <nav style="margin-top: 25px;margin-right: 10px;" class="menu">
+    <a href="#servicios">Servicios</a>
+    <a href="#trabajos">Trabajos</a>
+    <a href="#presupuesto">Presupuesto</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 style=" font-size: 45px">Instalaciones de <span style="color:#60a5fa;">pladur</span> profesional</h1>
+  <p>Madrid y alrededores · Acabados premium</p>
+  <a href="#presupuesto" class="btn btn-yellow">Pedir presupuesto</a>
+  <a style="background: black;" href="tel:602618447" class="btn btn-outline">Llamar ahora</a>
+</section>
+
+<section id="servicios">
+  <h2 class="dorado" style="color:#facc15;text-align: center";>¿A qué nos dedicamos?</h2>
+
+  <div class="grid grid-2">
+
+    <div class="card" style="border:2px solid #708090; ">
+      <strong><span class="animated-gradient-goldsilver">1. Estructura</span></strong><br><br>
+      Montaje resistente y preciso con acabados profesionales.
+    </div>
+
+    <div class="card" style="border:2px solid #708090; ">
+      <strong><span class="animated-gradient-goldsilver">2. Placas y fibra</span></strong><br><br>
+      Todo tipo de placas y aislamientos: acústica, ignífuga, hidrófuga ,etc.
+    </div>
+
+    <div class="card" style="border:2px solid #708090; ">
+      <strong><span class="animated-gradient-goldsilver">3. Acabado final</span></strong><br><br>
+      Encintado, masillado y acabado fino.
+    </div>
+
+  </div>
+</section>
+
+<section id="trabajos">
+  <h2 class="dorado" style="color:#60a5fa;text-align: center;">Acabados de pladur</h2>
+  <div class="grid grid-2">
+
+    <div class="card gallery">
+      <img src="https://ariaspladur.com/wp-content/uploads/2021/11/pladur.jpeg">
+      <img src="https://www.thespruce.com/thmb/ZIMJMc3Z-xQSDPAoEJ5dUsyP0Jo=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/96322279-56a49bcb5f9b58b7d0d7cba7.jpg">
+    </div>
+
+    <div class="card gallery">
+      <img src="https://cotetdisseny.es/wp-content/uploads/2022/11/plasterboard4.jpg">
+      <img src="https://www.proplac.net/wp-content/uploads/2016/06/PROPLAC-Posibilidades-de-Pladur-en-la-Decoracion.jpg">
+    </div>
+
+    <div class="card gallery">
+      <img src="https://i.pinimg.com/originals/e0/e9/ea/e0e9ea44030883829ee9eb9b87dec09d.jpg">
+      <img src="https://storage.googleapis.com/d_images/ProductImage/8018/763/Placas_de_Pladur_3D.jpg">
+    </div>
+
+    <div class="card gallery">
+      <img src="https://i.pinimg.com/originals/fd/12/8a/fd128a7323fe33402edde0005920a3f1.png">
+      <img src="https://innovandoespacios.com.co/wp-content/uploads/2022/11/1668098650674.jpg">
+    </div>
+
+  </div>
+</section>
+
+<section id="presupuesto">
+  <h2 class="dorado" style="color:#fb923c;text-align: center;">Presupuesto rápido</h2>
+  <form>
+    <input placeholder="Nombre" style="width:100%;padding:10px;margin:5px 0;background:#18181b;border:1px solid #333;color:white;">
+    <input placeholder="Teléfono" style="width:100%;padding:10px;margin:5px 0;background:#18181b;border:1px solid #333;color:white;">
+    <textarea placeholder="Describe tu proyecto" style="width:100%;padding:10px;margin:5px 0;height:100px;background:#18181b;border:1px solid #333;color:white;"></textarea>
+    <button class="btn btn-yellow" style="width:100%;">Solicitar presupuesto</button>
+  </form>
+</section>
+
+<footer id="contacto">
+  <p><strong>Hermanos A.E</strong></p>
+  <p>Madrid y alrededores</p>
+  <p>📞 602618447 / 602511978</p>
+  <p>🔸hermanosaesistemas@gmail.com</p>
+</footer>
+
+<div class="float-buttons">
+  <a href="https://wa.me/34602618447" class="whatsapp">WhatsApp</a>
+  <a href="tel:602618447" class="call">Llamar</a>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
